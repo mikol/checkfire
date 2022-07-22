@@ -38,6 +38,7 @@ import Register from './Register';
 
 import Prototypes from './Prototypes';
 
+import OrderOfArrival from './v2/components/OrderOfArrival.jsx'
 import V2 from './v2/App.jsx'
 
 import {getServerUrl, Legalese, serverGet} from './OctReactUtils';
@@ -137,6 +138,7 @@ class App extends Component {
             <FirePagesHeader validCookie={this.state.validCookie} />
           </Route>
           <Switch>
+            <Route path="/v2/order-of-arrival" exact component={OrderOfArrival} />
             <Route path="/v2/wildfirecheck" exact component={V2} />
             <Route path="/prototypes" exact component={Prototypes} />
             <Route path="/login" exact render={props =>
